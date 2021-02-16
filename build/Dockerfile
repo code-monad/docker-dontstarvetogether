@@ -1,6 +1,6 @@
 FROM dstacademy/steamcmd:0.4
 MAINTAINER DST Academy <support@dst.academy>
-
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 # Install dependencies.
 RUN set -x \
 	&& dpkg --add-architecture i386 \
